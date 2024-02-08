@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'colors.dart';
@@ -69,6 +68,11 @@ class AppStyle {
   static TextStyle font16WhiteSemiBold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.semiBold,
+    color: Colors.white,
+  );
+  static TextStyle font16WhiteMedium = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
     color: Colors.white,
   );
 

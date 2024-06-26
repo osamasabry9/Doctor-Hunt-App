@@ -10,7 +10,7 @@ class DoctorImageAndText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      SvgPicture.asset(Assets.imagesDocLogoOpacity),
+      SvgPicture.asset(Assets.svgDocLogoOpacity),
       const DoctorImageOnBoarding(),
       const DoctorTextOnBoarding(),
     ]);

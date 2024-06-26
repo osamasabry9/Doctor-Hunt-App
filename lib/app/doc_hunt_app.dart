@@ -18,7 +18,7 @@ class DocHuntApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: themeData(),
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.homeScreen,
       ),
     );
   }

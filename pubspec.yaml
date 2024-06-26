@@ -52,6 +52,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/svg/
 
   # fonts:
   #   - family: Schyler
@@ -66,7 +67,7 @@ flutter:
   #         weight: 700
 
 flutter_assets:
-  assets_path: assets/images/
+  assets_path: assets/
   output_path: lib/core/utils
   filename: app_assets.dart
   field_prefix:

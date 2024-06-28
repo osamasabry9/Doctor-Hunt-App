@@ -65,6 +65,13 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+targets:
+  main_development:
+    sources:
+      - lib/main_development.dart
+  main_production:
+    sources:
+      - lib/main_production.dart
 
 flutter_assets:
   assets_path: assets/

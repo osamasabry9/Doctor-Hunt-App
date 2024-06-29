@@ -1,45 +1,39 @@
-import 'package:doctor/core/helper/spacing.dart';
-import 'package:doctor/core/themes/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/helper/spacing.dart';
+import '../../../../../core/themes/app_style.dart';
+import '../../../data/models/specializations_response_model.dart';
+import 'image_doctor_container.dart';
+
 class DoctorsListItem extends StatelessWidget {
-  const DoctorsListItem({
-    super.key,
-  });
+  const DoctorsListItem({super.key, this.doctorsModel});
+  final Doctors? doctorsModel;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 16.h),
       child: Row(children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(12.0),
-          child: Image.network(
-            width: 110.w,
-            height: 120.h,
-            'https://t4.ftcdn.net/jpg/03/20/52/31/360_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni.jpg',
-            fit: BoxFit.cover,
-          ),
-        ),
+        const ImageDoctorContainer(),
         horizontalSpace(16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Dr. Randy Wigham',
+                doctorsModel?.name ?? 'Name',
                 style: AppStyle.font18DarkBlueBold,
                 overflow: TextOverflow.ellipsis,
               ),
               verticalSpace(5),
               Text(
-                'General | RSUD Gatot Subroto',
+                '${doctorsModel?.degree} | ${doctorsModel?.phone}',
                 style: AppStyle.font12GrayMedium,
               ),
               verticalSpace(5),
               Text(
-                'Email@email.com',
+                doctorsModel?.email ?? 'Email',
                 style: AppStyle.font12GrayMedium,
               ),
             ],

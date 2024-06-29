@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helper/spacing.dart';
+import '../widgets/doctors/doctors_bloc_builder.dart';
 import '../widgets/doctors_blue_container.dart';
-import '../widgets/doctors_list_view.dart';
-import '../widgets/doctors_specialty_list_view.dart';
 import '../widgets/doctors_specialty_see_all.dart';
 import '../widgets/home_top_bar.dart';
+import '../widgets/specializations/specializations_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,12 +23,12 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HomeTopBar(),
               const DoctorsBlueContainer(),
-              verticalSpace(24.h),
+              verticalSpace(24),
               const DoctorsSpecialtySeeAll(),
               verticalSpace(18),
-              const DoctorsSpecialtyListView(),
+              const SpecializationsBlocBuilder(),
               verticalSpace(8),
-              const DoctorsListView(),
+              const DoctorsBlocBuilder(),
             ],
           ),
         ),
